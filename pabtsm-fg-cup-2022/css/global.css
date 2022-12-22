@@ -1,0 +1,18 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body
+{
+    font-family: Lato;
+}
+
+pfg-topbar {
+    display:block;
+    overflow: hidden;
+    background-color: rgb(33, 33, 33);
+}
+
+pfg-topbar a {
+    float: left;
+    padding: 10px;
+    color: white;
+}
