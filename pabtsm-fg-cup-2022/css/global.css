@@ -3,6 +3,7 @@
 body
 {
     font-family: Lato;
+    margin: 0;
 }
 
 pfg-topbar {
@@ -13,6 +14,12 @@ pfg-topbar {
 
 pfg-topbar a {
     float: left;
-    padding: 10px;
+    padding: 17px;
     color: white;
+    text-decoration: none;
+}
+
+pfg-topbar a:hover {
+    background-color: white;
+    color: rgb(33, 33, 33);
 }
