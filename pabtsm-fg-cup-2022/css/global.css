@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 body
 {
@@ -10,16 +10,130 @@ pfg-topbar {
     display:block;
     overflow: hidden;
     background-color: rgb(33, 33, 33);
+    position: sticky;
+    top: 0;
 }
 
 pfg-topbar a {
+    display: inline-block;
     float: left;
     padding: 17px;
     color: white;
+    transition: all ease-in-out 0.1s;
     text-decoration: none;
 }
 
 pfg-topbar a:hover {
+    transform: scale(1.1);
     background-color: white;
     color: rgb(33, 33, 33);
+    box-shadow: white 0px 0px 50px;
+}
+
+.logo-container {
+    padding: 10px !important;
+}
+
+topbar-logo {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../textures/logo_white.png);
+    background-size: cover;
+    width: 32px; /* Width of new image */
+    height: 32px; /* Height of new image */
+     /* Equal to width of new image */
+}
+
+pfg-topbar a:hover topbar-logo {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../textures/logo_black.png);
+    background-size: cover;
+    width: 32px; /* Width of new image */
+    height: 32px; /* Height of new image */
+    /* Equal to width of new image */
+}
+
+.pfg-banner{
+    background-color: black;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    color: white;
+}
+
+h1{
+    font-weight: 900;
+}
+
+.features {
+    display: flex;
+    background-color: rgb(0, 255, 122);
+}
+
+.features-left {
+    text-align: left !important;
+    margin-left: 20px;
+}
+
+.features-right {
+    text-align: right !important;
+    margin-right: 20px;
+}
+
+.features-column {
+    flex: 50%;
+    text-align: center;
+    
+    text-align: center;
+    color: white;
+}
+
+.teams {
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    text-align: center;
+}
+
+.teams .vs {
+    text-shadow: 0px 0px 20px rgb(255, 133, 0);
+    color: rgb(255, 133, 0);
+}
+
+
+
+    .teams *:not(.vs):not(h1) {
+        text-shadow: 0px 0px 40px white;
+        line-height: 20px !important;
+    }
+
+.team-blue {
+    background-color: aqua;
+    line-height: 0px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: aqua 0px 0px 40px;
+    
+}
+
+.team-red {
+    background-color: red;
+    line-height: 0px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: red 0px 0px 40px;
+}
+
+.team-green {
+    background-color: lime;
+    line-height: 0px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: lime 0px 0px 40px;
+}
+
+.team-yellow {
+    background-color: yellow;
+    line-height: 0px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: yellow 0px 0px 40px;
 }

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PabTSM - PabTSM Fall Guys Cup 2022</title>
+    <link href="css/global.css" rel="stylesheet" />
+</head>
+<body>
+    <pfg-topbar>
+        <a href="#" class="logo-container"><topbar-logo></topbar-logo></a>
+        <a href="register.html">Register</a>
+        <a href="about.html">About</a>
+        <a href="https://fallguys.com" target="_blank">Fall Guys Website</a>
+    </pfg-topbar>
+    <div class="pfg-banner">
+        <img src="textures/logo_white.png" />
+        <p><b>THE LAST CUP OF THE YEAR</b><br />Coming real soon if I have time</p>
+        <h1>REGISTER TO PLAY</h1>
+    </div>
+    <div style="text-align: center">
+    <p>Welcome to the Register page!</p>
+    <p>We'll ask you for some stuff. It's required so you can enter.</p>
+    <p>It's also required you have a ROBLOX account, in order to chat with other team members. And also to get the custom game code.</p>
+    <form action="https://gamezlauncher.000webhostapp.com/pabtsm-fg-cup/registerPlayer.php">
+        <label for="fg_name">Fall Guys/Epic Games username:</label><br />
+        <input type="text" id="fg_name" name="fg_name" /><br /><br />
+
+        <label for="rbx_name">ROBLOX username:</label><br />
+        <input type="text" id="rbx_name" name="rbx_name" /><br /><br />
+
+        <h3>Select your team:</h3>
+
+        <input type="radio" id="green" name="team" value="Green">
+        <label for="green">Green</label><br>
+
+        <input type="radio" id="red" name="team" value="Red">
+        <label for="red">Red</label><br>
+
+        <input type="radio" id="yellow" name="team" value="Yellow">
+        <label for="yellow">Yellow</label><br>
+
+        <input type="radio" id="blue" name="team" value="Blue">
+        <label for="blue">Blue</label>
+
+
+        <br /><br />
+        <input type="submit" value="Submit" />
+    </form>
+        </div>  
+</body>
+</html>
