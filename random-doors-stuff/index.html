@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>random doors stuff</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+</head>
+<body>
+
+    <script>
+
+        window.onload = function () {
+            document.getElementById("gtk-gold-count").addEventListener("input", () => {
+                ConvertToKnobs();
+            })
+        }
+
+        function ConvertToKnobs() {
+            var gold = document.getElementById("gtk-gold-count").value
+            var goldPerKnob = 17;
+
+            document.getElementById("gtk-knob-count").value = Math.round(gold / goldPerKnob);
+        }
+
+        function ConvertToKnobsVal(gold) {
+            
+            var goldPerKnob = 17;
+
+            return Math.round(gold / goldPerKnob);
+        }
+
+        window.DoTheEpicSCCalculationsPleaseINeedItThankYou = function () {
+            var goldKnobs = ConvertToKnobsVal(document.getElementById("sc-gold-count").value);
+            console.log(goldKnobs + " goldknob");
+            var roomsPassed = document.getElementById("sc-room-count").value;
+            console.log(roomsPassed + " room");
+
+            var multiplier = 1 + parseInt(document.getElementById("sc-friend-count").value);
+            if (document.getElementById("sc-boost-active").checked) {
+                multiplier += 5;
+            }
+            console.log(document.getElementById("sc-boost-active").checked + " boost" + multiplier + " multi");
+            var totalKnobs = (parseInt(goldKnobs) + parseInt(roomsPassed)) * multiplier;
+
+            console.log(totalKnobs);
+
+            document.getElementById("sc-knobs").innerHTML = totalKnobs.toString() + " knobs";
+        }
+
+    </script>
+
+    <img src="./img/title.png" width="340" height="230" style="width: 340px; height: 230px;" />
+    <h2>i got bored</h2>
+
+    <div class="divider"></div>
+
+    <h1>GOLD TO KNOBS</h1>
+    <p>too lazy to see your knobs after door 100 or after dying?<br />this is the tool for you!!!!!!!!!!!!!</p>
+    <p><i>"wow this is a really useful tool"</i> - literally no one</p>
+
+    <div class="space"></div>
+
+    <h3>GOLD:</h3>
+    <input class="input-textbox" placeholder="17" id="gtk-gold-count" type="number"/>
+    <span> gold</span>
+
+    <div class="space"></div>
+
+    
+
+    <h3>KNOBS YOU'LL GET:</h3>
+    <input class="input-textbox" disabled="disabled" placeholder="1" id="gtk-knob-count" />
+    <span>knobs</span>
+
+    <div class="space"></div><div class="space"></div>
+
+    <p><b>current knob value: </b>17 gold = 1 knob</p>
+    <p><b>formula or whatever it's called: </b>(gold) / (knob value) but rounded</p>
+    <p>visual studio if you could kindly stop adding double apostrophes? thank youuu</p>
+
+    <div class="divider"></div>
+
+    <h1>SUMMARY CALCULATOR</h1>
+    <p><u><b>figure</b></u> out how much knobs you will win each round!!</p>
+    <p>sorry not sorry for the pun</p>
+
+    <div class="space"></div>
+
+    <h3>GOLD:</h3>
+    <input class="input-textbox" placeholder="17" id="sc-gold-count" type="number" />
+    <span> gold</span>
+
+    <div class="space"></div>
+
+    <h3>ROOMS PASSED:</h3>
+    <input class="input-textbox" placeholder="101" id="sc-room-count" type="number" />
+    <span> rooms</span>
+
+    <div class="space"></div>
+
+    <h3>FRIENDS PLAYING WITH YOU:</h3>
+    <input class="input-textbox" placeholder="0" id="sc-friend-count" type="number" />
+    <span> friends</span>
+
+    <div class="space"></div>
+    <h3>BOOST ACTIVE:</h3>
+    <input class="input-textbox" type="checkbox" id="sc-boost-active" />
+
+    <div class="space"></div>
+
+    <a class="button bold" href="javascript:DoTheEpicSCCalculationsPleaseINeedItThankYou()">DO THE EPIC CALCULATIONS</a>
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <h3>TOTAL KNOB COUNT:</h3>
+
+    <h2 id="sc-knobs">0 knobs</h2>
+
+    <div class="divider"></div>
+
+    <p>DOORS made by LSPLASH in roblox</p>
+</body>
+</html>
