@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wordle-container">
+        <h1>Wordle Game</h1>
+        <div id="word-display"></div>
+        <div id="guess-input">
+            <input type="text" id="guess" maxlength="5" placeholder="Enter your guess">
+            <button onclick="checkGuess()">Guess</button>
+        </div>
+        <div id="feedback"></div>
+    </div>
+
+    <script src="wordle.js"></script>
+</body>
+</html>
